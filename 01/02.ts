@@ -22,7 +22,7 @@ const categoryDiscounts: Category[] = [
 
 function applyDiscountByCategory(price: number, cat: string) {
     const category = categoryDiscounts.find((item: Category) => {
-        item.cat === cat;
+        return item.cat === cat;
     });
     return category ?
         price * (1 - (category.disc / 100)) :
@@ -37,3 +37,15 @@ function applyDiscountToProducts(prods: Product[]) {
     console.log(prods);
 };
 
+applyDiscountToProducts([
+    {
+    name: "Shirt",
+    price: 100,
+    cat: "A",
+    },
+    {
+    name: "Jeans",
+    price: 200,
+    cat: "B",
+    }
+]);
