@@ -1,4 +1,4 @@
-function validate(num: number): boolean {
+function validateFibonacciInput(num: number): boolean {
   return num >= 1 && Math.floor(num) === num;
 }
 
@@ -30,7 +30,7 @@ function displayArray(arr: any[]) {
 }
 
 function fib(num: number) {
-  if (!validate(num)) {
+  if (!validateFibonacciInput(num)) {
     console.log("Invalid input!");
     return;
   }
